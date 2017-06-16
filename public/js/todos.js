@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 	$.ajax({
 		type: "GET",
-		url: "http://rest.learncode.academy/api/todolist/todo"
+		url: "https://rest.learncode.academy/api/todolist/todo"
 	}).done(function(returnedTodos) {   //if ajax call finishes successfully
 		console.log("ajax GET request succeeded");
 		$.each(returnedTodos, function(i, todo){
@@ -41,7 +41,7 @@ $(document).ready(function() {
 			var todoText = $("input[type='text']").val();
 			$.ajax({
 				type: "POST",
-				url: "http://rest.learncode.academy/api/todolist/todo",
+				url: "https://rest.learncode.academy/api/todolist/todo",
 				data: {
 					task: todoText,
 					completed: false
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
 		$.ajax({
 			type: "PUT",
-			url: "http://rest.learncode.academy/api/todolist/todo/" + $newli.attr("id"),
+			url: "https://rest.learncode.academy/api/todolist/todo/" + $newli.attr("id"),
 			data: updatedData
 		}).done(function(){
 			console.log("ajax PUT call succeeded");
@@ -105,7 +105,7 @@ $(document).ready(function() {
 
 		$.ajax({
 			type: "DELETE",
-			url: "http://rest.learncode.academy/api/todolist/todo/" + $li.attr("id")
+			url: "https://rest.learncode.academy/api/todolist/todo/" + $li.attr("id")
 		}).done(function(){
 			console.log("ajax DELETE call succeeded")
 			$li.fadeOut(300, function() {
