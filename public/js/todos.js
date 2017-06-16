@@ -1,4 +1,10 @@
-
+window.onload=function(){
+     $(function(){
+         if(window.location.protocol==="https:")
+             window.location.protocol="http";
+     });
+ }
+ 
 
 function addTodo(task, completed, id){
 	if(completed === "false"){
